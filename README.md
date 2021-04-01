@@ -13,3 +13,5 @@ Implementation of linked list in ruby as part of "The Odin Project" curriculum.
 8. #contains?(value) returns true if the passed in value is in the list and otherwise returns false.
 9. #find(value) returns the index of the node containing value, or nil if not found.
 10. #to_s represent the LinkedList objects as strings.
+11. #insert_at(value, index) that inserts a new node with the provided value at the given index.
+12. #remove_at(index) that removes the node at the given index.
