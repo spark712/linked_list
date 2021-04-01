@@ -82,6 +82,40 @@ class LinkedList
     end
     return "The element #{val} is not in the list." 
   end
+  
+  def insert_at(val, index)
+    if index == 0
+      prepend(val)
+    else
+      new_node = Node.new(val)
+      count = 0
+      current_node = @head
+      until count == index - 1
+        current_node = current_node.next_node
+        count += 1
+      end
+      new_node.next_node = current_node.next_node
+      current_node.next_node = new_node
+    end
+  end
+
+  def remove_at(index)
+    return "Empty List." if @head.nil?
+    return "Invalid Index" if index == size
+    count = 0
+    current_node = @head
+    until current_node.nil?
+      if index == 0
+        @head = @head.next_node
+        return
+      elsif count == index - 1
+        current_node.next_node = current_node.next_node.next_node
+      else
+        current_node = current_node.next_node
+      end
+      count += 1
+    end
+  end
 
   def to_s
     return "Empty list." if @head.nil?
