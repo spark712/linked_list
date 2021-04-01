@@ -24,3 +24,7 @@ first_list.to_s
 p first_list.size
 p "Head: #{first_list.head.value}"
 p "Tail:#{first_list.tail.value}"
+first_list.insert_at(8, 1)
+first_list.to_s
+first_list.remove_at(1)
+first_list.to_s
